@@ -1,0 +1,61 @@
+*,*::before,*::after{padding: 0;margin: 0;box-sizing: border-box;}
+
+body{
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1{
+  position: relative;
+  text-transform: uppercase;
+  font-family: consolas;
+  letter-spacing: 0.1em;
+  font-size: 10em;
+  color: transparent;
+}
+h1::before{
+  content: 'ASL';
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  background: linear-gradient(to right, #f00, #ff0, #0ff,#0f0,#f0f,#ffc800);
+  -webkit-background-clip: text;
+  color: transparent;
+  /* controla o tamanho da animação, o valor de steps deve ser a quantidade de letras que ta na animação */
+  animation: type 2s steps(3) infinite;
+  filter:blur(1px);
+}
+h1::after{
+  content: 'ASL';
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  background: linear-gradient(to right, #f00, #ff0, #0ff,#0f0,#f0f,#ffc800);
+  -webkit-background-clip: text;
+  color: transparent;
+  /* controla o tamanho da animação, o valor de steps deve ser a quantidade de letras que ta na animação */
+  animation: type 2s steps(3) infinite;
+  filter:blur(60px);
+}
+
+@keyframes type{
+  0%{width: 0;}
+  70%{width: 100%;}
+  90%{width: 100%;}
+  100%{width: 100%;}
+}
