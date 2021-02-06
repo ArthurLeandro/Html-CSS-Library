@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700&subset=latin-ext");
+///// Variables
+$body-bgc: lightblue;
+$card-bgc: #3b3a36;
+$card-color: snow;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $body-bgc;
+  padding: 1rem;
+}
+.card {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: $card-bgc;
+  padding: 2rem;
+  position: relative;
+}
+.card:before,
+.card:after,
+p:before,
+p:after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: lightblue;
+  position: absolute;
+}
+.card:before {
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 100%;
+  box-shadow: -1px -1px $body-bgc;
+}
+.card:after {
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 100%;
+  box-shadow: 1px 1px $body-bgc;
+}
+p {
+  //position: relative;
+  padding: 0.3rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: $card-color;
+}
+p:before {
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 100%;
+  box-shadow: 1px -1px $body-bgc;
+}
+p:after {
+  bottom: 0;
+  left: 0;
+  border-top-right-radius: 100%;
+  box-shadow: -1px 1px $body-bgc;
+}
+

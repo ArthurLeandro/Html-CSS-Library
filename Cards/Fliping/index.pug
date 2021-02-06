@@ -1,0 +1,7 @@
+- var values = ['flip-right', 'flip-left', 'flip-up', 'flip-down', 'flip-diagonal-right', 'flip-diagonal-left', 'flip-inverted-diagonal-right', 'flip-inverted-diagonal-left'];
+
+each val in values
+  div(class='card-wrapper ' + val)
+    div.card
+      div.front= val.split('-').join(' ')
+      div.back BACK
